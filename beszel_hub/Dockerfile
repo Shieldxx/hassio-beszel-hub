@@ -1,5 +1,7 @@
 FROM henrygd/beszel:latest
 
-# Beszel uklada data do /beszel_data. Presmerujeme je do /data (perzistentni
-# add-on volume HAOS) pres symlink, aby prezila restart i update add-onu.
-RUN rm -rf /beszel_data && ln -s /data/beszel_data /beszel_data
+# henrygd/beszel je distroless (nema shell) => zadny RUN nejde.
+# Misto symlinku jen prepiseme CMD, aby beszel psal PocketBase data do /data
+# (perzistentni add-on volume HAOS) => prezije restart i update add-onu.
+# ENTRYPOINT ["/beszel"] se dedi z base image.
+CMD ["serve", "--http=0.0.0.0:8090", "--dir=/data"]
