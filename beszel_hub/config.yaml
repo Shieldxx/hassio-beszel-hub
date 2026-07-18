@@ -1,0 +1,13 @@
+name: Beszel Hub
+version: "1.0.0"
+slug: beszel_hub
+description: Beszel - lightweight self-hosted server monitoring hub
+url: https://github.com/Shieldxx/hassio-beszel-hub
+arch:
+  - amd64
+  - aarch64
+init: false
+ports:
+  8090/tcp: 8090
+ports_description:
+  8090/tcp: Beszel web UI
