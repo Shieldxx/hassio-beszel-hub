@@ -1,0 +1,11 @@
+{
+  "source_repo": "Shieldxx/hassio-beszel-hub",
+  "source_dir": "beszel_hub",
+  "addon_dir": "beszel_hub",
+  "files": [
+    "config.yaml", "Dockerfile", "run.sh", "nginx.conf",
+    "icon.png", "README.md", "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dirs": []
+}

@@ -1,0 +1,11 @@
+# Files executed or parsed inside the Linux add-on container must be LF on every
+# checkout and in every archive, whatever core.autocrlf says on the machine that
+# produced them: with CRLF, run.sh's first line becomes "#!/bin/sh\r" and the
+# container cannot start.
+*.sh        text eol=lf
+Dockerfile  text eol=lf
+*.conf      text eol=lf
+
+# Shared byte-for-byte with the other add-on development repositories, and
+# compared there by sha256 - so the same bytes on every checkout.
+scripts/publish_addon.py  text eol=lf
