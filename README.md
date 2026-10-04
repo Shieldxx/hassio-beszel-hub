@@ -5,9 +5,8 @@ This is the development repository of the **Beszel Hub** add-on. **Install it fr
 all Shieldxx add-ons — not from here.
 
 The add-on itself is in [`beszel_hub/`](beszel_hub); see its [README](beszel_hub/README.md).
-
-> `repository.yaml` is still here only so installs made from this repository keep
-> working until they have moved to `ha-addons`. It goes after that.
+This repository has no `repository.yaml`, so Home Assistant cannot add it as an add-on
+repository — that is on purpose.
 
 ## Releasing
 
